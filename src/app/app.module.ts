@@ -23,12 +23,14 @@ import { MatRadioModule } from '@angular/material/radio';
 import { filter, throttleTime } from 'rxjs/operators';
 import { Qes2Component } from './qes2/qes2.component';
 import {MatTableModule} from '@angular/material/table';
+import { Qes1Component } from './qes1/qes1.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     Qes2Component,
+    Qes1Component,
   ],
   imports: [
     BrowserModule,
