@@ -1,0 +1,33 @@
+<h2>ROW</h2>
+<div class="layout" fxLayout="row">
+  <div fxFlex="200px" background-color="red">
+    <p>1</p>
+    <mat-form-field class="example-form-field">
+      <mat-label>Clearable input</mat-label>
+      <input matInput type="number" name="name" [(ngModel)]="qesModel.name" required>
+      <button mat-button *ngIf="qesModel.name" matSuffix mat-icon-button
+        aria-label="Clear" (click)="qesModel.name=null">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+
+  </div>
+  <div fxFlex="600px">
+    <p>2</p>
+    <mat-form-field appearance="fill">
+      <mat-label>calculate</mat-label>
+      <mat-select name="qe" [(ngModel)]="qesModel.qe" required>
+        <mat-option *ngFor="let qe of qes" [value]="qe">{{qe}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div fxFlex="300px">
+    <p>3</p>
+    <form>
+      <pre>{{ getCurrentModel() }}</pre>
+      <br />
+    </form>
+  </div>
+
+</div>
